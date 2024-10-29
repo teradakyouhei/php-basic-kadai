@@ -9,32 +9,31 @@
 <body>
     <p>
         <?php
-            function sort_2way(array $array, bool $order): array {
-                // ソート方向に応じて処理
-                if ($order) {
-                    sort($array); // 昇順
-                } else {
-                    rsort($array); // 降順
-                }
-                return $array;
+        function sort_2way(array $array, bool $order): void {
+            // ソート方向に応じて処理
+            if ($order) {
+                sort($array); // 昇順
+                echo "昇順にソートします<br>";
+            } else {
+                rsort($array); // 降順
+                echo "降順にソートします<br>";
             }
             
-            // 配列の定義
-            $num = [15, 4, 18, 23, 10];
-            
-            // 昇順ソート
-            $sorted_asc = sort_2way($num, true);
-            echo "昇順にソートします。<br>";
-            foreach ($sorted_asc as $number) {
+            // 各要素を縦に表示
+            foreach ($array as $number) {
                 echo $number . "<br>";
             }
-            
-            // 降順ソート
-            $sorted_desc = sort_2way($num, false);
-            echo "降順にソートします。<br>";
-            foreach ($sorted_desc as $number) {
-                echo $number . "<br>";
-            }
+            echo "<br>"; // 改行を追加
+        }
+
+        // 配列の定義
+        $num = [15, 4, 18, 23, 10];
+
+        // 昇順ソートを実行
+        sort_2way($num, true);
+
+        // 降順ソートを実行
+        sort_2way($num, false);
         ?>
     </p>
 </body>
