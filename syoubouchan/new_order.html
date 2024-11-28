@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規受注登録</title>
+    <link rel="stylesheet" href="syoubouchan.css">
+</head>
+<body>
+
+<div class="header">
+    <h2>新規受注登録</h2>
+    <a href="index.php" class="button">戻る</a>
+</div>
+
+<!-- 新規受注登録フォーム -->
+<form action="save_property.php" method="POST">
+    <label for="code">コード№:</label>
+    <input type="text" name="code" required>
+    <br>
+    <label for="name">物件名:</label>
+    <input type="text" name="name" required>
+    <br>
+    <label for="company">得意先名:</label>
+    <input type="text" name="company" required>
+    <br>
+    <label for="sales_person">担当営業:</label>
+    <select name="sales_person" required>
+        <option value="">選択してください</option>
+        <option value="野口">野口</option>
+        <option value="宮崎">宮崎</option>
+        <option value="寺田">寺田</option>
+        <option value="小野木">小野木</option>
+        <option value="町井">町井</option>
+    </select>
+    <br>
+    <label for="address">住所:</label>
+    <input type="text" name="address" required>
+    <br>
+    <label for="check_status">点検表提出済:</label>
+    <select name="check_status" required>
+        <option value="">選択してください</option>
+        <option value="○">○</option>
+        <option value="✕">✕</option>
+    </select>
+    <br>
+    <a href="index.php" button type="submit">登録</button>
+</form>
+
+</body>
+</html>
